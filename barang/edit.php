@@ -54,6 +54,5 @@ if (isset($_POST['update'])) {
         </form>
     </div>
 </body>
-<?php include 'index.php' ?>
 
 </html>

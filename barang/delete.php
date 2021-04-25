@@ -2,7 +2,6 @@
 include 'config.php';
 $id_barang = $_GET['id'];
 
-
 mysqli_query($conn, "DELETE FROM barang WHERE id_barang = '$id_barang'");
 echo "<script>window.alert('Data barang Berhasil Di Hapus.');
         window.location='index.php'</script>";
@@ -25,7 +24,3 @@ echo "<script>window.alert('Data barang Berhasil Di Hapus.');
 </body>
 
 </html>
-
-<?php
-header('index.php');
-?>

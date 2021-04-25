@@ -48,6 +48,5 @@ if (isset($_POST['tambah'])) {
         </form>
     </div>
 </body>
-<?php include 'index.php' ?>
 
 </html>
