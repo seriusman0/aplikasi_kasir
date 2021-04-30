@@ -1,8 +1,9 @@
 <?php
 include '../barang/config.php';
+include 'functions.php';
+
+$totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FROM `history`"))[0];
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,9 @@ include '../barang/config.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
 
@@ -18,19 +22,75 @@ include '../barang/config.php';
     <h1>
         <center>
             <b>
-                SELAMAT DATANG DI KANTIN KEJUJURAN
+                SELAMAT DATANG
             </b>
         </center>
     </h1>
-    <table align="center" border="1">
+    <table border="2" align="center" class="table">
         <tr>
-            <th colspan="4" width="40%">menu</th>
-            <th colspan="8" width="80%">view</th>
+            <th width='40%'>Menu</th>
+            <th>History</th>
+            <th>Total <?= $totalKeseluruhan ?></th>
         </tr>
         <tr>
-            <td colspan="4"><?php include 'add.php' ?></td>
-
-            <td colspan="8" align="center"><?php include 'history.php' ?></td>
+            <td><?php include 'add.php' ?></td>
+            <td rowspan="19" colspan="2">
+                <?php include 'history.php' ?>
+            </td>
+        </tr>
+        <tr>
+            <th>Cart</th>
+        </tr>
+        <tr>
+            <td><?php include 'cart.php' ?></td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>--</td>
         </tr>
     </table>
 

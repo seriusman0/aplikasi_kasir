@@ -15,8 +15,6 @@ $barang = mysqli_query($conn, "select * from barang");
 </head>
 
 <body>
-
-
     <table border="1">
         <tr>
             <th>No</th>
