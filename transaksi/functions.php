@@ -13,9 +13,3 @@ function payment($nama, $id_cart)
     mysqli_query($conn, "UPDATE `barang` SET `stok` = (barang.stok-'$jumlah') WHERE `barang`.`id_barang` = '$id_barang';");
     mysqli_query($conn, "INSERT INTO `history` (`id_history`, `nama_pembeli`, `nama_barang`, `harga`, `jumlah`, `total`, `at`) VALUES (NULL, '$nama', '$nama_barang', '$harga_barang', '$jumlah', '$total', CURRENT_TIMESTAMP);");
 }
-
-function rupiah($angka)
-{
-    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
-    return $hasil_rupiah;
-}

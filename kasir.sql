@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 30, 2021 at 04:18 PM
+-- Generation Time: Apr 30, 2021 at 06:42 PM
 -- Server version: 8.0.23-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -73,8 +73,8 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga`, `stok`) VALUES
 ('8997878001371', 'Milkita Melon', 500, 5),
 ('8998009010552', 'Ultra Vanilla', 4500, 1),
 ('8998009010569', 'Ultra Coklat', 4500, 1),
-('8998009010576', 'Ultra Stroberi', 4500, 2),
-('8998009040023', 'Teh Kotak', 3500, 8),
+('8998009010576', 'Ultra Stroberi', 4500, 1),
+('8998009040023', 'Teh Kotak', 3500, 7),
 ('8998866201445', 'Pota-Bee', 2000, 2),
 ('8998866610377', 'Iso+', 3000, 1),
 ('8999999000165', 'Taro', 1000, 3);
@@ -116,7 +116,9 @@ CREATE TABLE `history` (
 
 INSERT INTO `history` (`id_history`, `nama_pembeli`, `nama_barang`, `harga`, `jumlah`, `total`, `at`) VALUES
 (1, 'Ernadel', 'Smax Ring', 1000, 1, 1000, '2021-04-30 09:15:44'),
-(2, 'Ernadel', 'Momogi Fruit', 500, 1, 500, '2021-04-30 09:15:44');
+(2, 'Ernadel', 'Momogi Fruit', 500, 1, 500, '2021-04-30 09:15:44'),
+(3, 'Aldo', 'Teh Kotak', 3500, 1, 3500, '2021-04-30 10:49:00'),
+(4, 'Aldo', 'Ultra Stroberi', 4500, 1, 4500, '2021-04-30 10:49:00');
 
 -- --------------------------------------------------------
 
@@ -217,7 +219,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id_history` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_history` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`

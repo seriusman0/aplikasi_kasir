@@ -19,18 +19,22 @@ $totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FR
 </head>
 
 <body>
+
     <h1>
         <center>
             <b>
-                SELAMAT DATANG
+                SELAMAT DATANG DI KANTIN KEJUJURAN
             </b>
+            <font size="1">
+                <marquee behavior="alternate" class="fixed-bottom" width="100%">Aplikasi masih dalam tahap pengembangan . . . .</marquee><br>
+            </font>
         </center>
     </h1>
-    <table border="2" align="center" class="table">
+    <table align="center" class="table">
         <tr>
-            <th width='40%'>Menu</th>
+            <th width='40%' class="position-relative">1. Menu</th>
             <th>History</th>
-            <th>Total <?= $totalKeseluruhan ?></th>
+            <th class="btn-success">Total <?php echo "Rp " . number_format($totalKeseluruhan, 0, ',', '.'); ?></th>
         </tr>
         <tr>
             <td><?php include 'add.php' ?></td>
@@ -39,7 +43,7 @@ $totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FR
             </td>
         </tr>
         <tr>
-            <th>Cart</th>
+            <th>2. Cart</th>
         </tr>
         <tr>
             <td><?php include 'cart.php' ?></td>

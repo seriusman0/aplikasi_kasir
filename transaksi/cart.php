@@ -18,7 +18,26 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
 </head>
 
 <body>
-    <table border="1">
+    <form action="payment.php" method="post">
+        <div class="form-group">
+            <p>
+                <label for="nama">Nama : </label>
+                <input type="text" name="nama" placeholder="Nama Anda" required>
+            </p>
+            <b>
+                <p>
+                    <label for="paid">Total Bayar : </label>
+                    <input type="number" name="paid" value="<?= $jTotal; ?>" readonly>
+                </p>
+            </b>
+            <p>
+
+                <input type="submit" name="bayar" id="bayar" value="Bayar" class="btn-danger">
+            </p>
+        </div>
+    </form>
+
+    <table>
         <tr>
             <th>No</th>
             <th>ID</th>
@@ -44,25 +63,6 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
 
         ?>
     </table>
-
-    <form action="payment.php" method="post">
-        <div class="form-group">
-            <p>
-                <label for="nama">Nama : </label>
-                <input type="text" name="nama" required>
-            </p>
-            <b>
-                <p>
-                    <label for="paid">Total Bayar : </label>
-                    <input type="number" name="paid" value="<?= $jTotal; ?>" readonly>
-                </p>
-            </b>
-            <p>
-
-                <input type="submit" name="bayar" id="bayar" value="Bayar">
-            </p>
-        </div>
-    </form>
 
 
 </body>

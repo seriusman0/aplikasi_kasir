@@ -1,6 +1,10 @@
 <?php
 include 'config.php';
-
+function rupiah($angka)
+{
+    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
+    return $hasil_rupiah;
+}
 $barang = mysqli_query($conn, "select * from barang");
 ?>
 
@@ -28,7 +32,7 @@ $barang = mysqli_query($conn, "select * from barang");
             echo "<tr>
                     <td>$no</td>
                     <td>$r[nama_barang]</td>
-                    <td>$r[harga]</td>
+                    <td>" . rupiah($r['harga']) . "</td>
                     <td>$r[stok]</td>
                     <td><a href='delete.php?id=$r[id_barang]' onclick=\"return confirm('Yakin ini Dihapus?')\" >Delete</a></td>
                     <td><a href='edit.php?id=$r[id_barang]'>Edit</a></td>

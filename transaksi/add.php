@@ -21,15 +21,15 @@ include '../barang/config.php';
         <div class="form-group">
             <p>
                 <label for="id_barang">ID Barang : </label>
-                <input type="text" name="id_barang" id="id_barang" placeholder="Scan Barcode">
+                <input type="text" name="id_barang" required id="id_barang" autofocus placeholder="Scan Barcode">
             </p>
 
             <p>
                 <label for="jumlah">Jumlah : </label>
-                <input type="number" name="jumlah" placeholder="Jumlah Item yang akan di beli">
+                <input type="number" name="jumlah" required placeholder="Jumlah Item yang akan di beli">
             </p>
             <div>
-                <input type="submit" name="oke" id="oke" value="OKE">
+                <input type="submit" name="oke" id="oke" value="Letakkan Di keranjang" class="btn-success">
             </div>
         </div>
     </form>
