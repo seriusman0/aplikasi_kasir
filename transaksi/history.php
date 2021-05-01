@@ -22,16 +22,18 @@ function rupiah($angka)
 </head>
 
 <body>
-    <table align="center" class="table-dark" width='100%'>
-        <tr>
-            <th scope="col">No</th>
-            <th scope="col">Nama Pembeli</th>
-            <th scope="col">Nama Barang</th>
-            <th scope="col">Harga</th>
-            <th scope="col">Jumlah</th>
-            <th scope="col">Total</th>
-            <a href=""></a>
-        </tr>
+    <table class="table table-striped table-dark table-hover">
+        <thead class="thead-dark bg-dark">
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama </th>
+                <th scope="col">Item </th>
+                <th scope="col">Harga</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Total</th>
+                <a href=""></a>
+            </tr>
+        </thead>
         <?php $no = 1;
         while ($r = mysqli_fetch_array($history)) {
             echo "<tr>

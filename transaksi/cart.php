@@ -12,28 +12,27 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>KANTIN KEJUJURAN</title>
 </head>
 
 <body>
     <form action="payment.php" method="post">
-        <div class="form-group">
-            <p>
-                <label for="nama">Nama : </label>
-                <input type="text" name="nama" placeholder="Nama Anda" required>
-            </p>
-            <b>
-                <p>
-                    <label for="paid">Total Bayar : </label>
-                    <input type="number" name="paid" value="<?= $jTotal; ?>" readonly>
-                </p>
-            </b>
-            <p>
-
-                <input type="submit" name="bayar" id="bayar" value="Bayar" class="btn-danger">
-            </p>
+        <div class="form-group row">
+            <label for="nama" class="col-sm-2 col-form-label">Nama : </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext border border-warning progress-bar" id="nama" name="nama" placeholder="Nama Anda">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="paid" class="col-sm-2 col-form-label">Total Bayar : </label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control-plaintext progress-bar bg-danger" id="paid" name="paid" placeholder="Total Tagihan" value="<?= $jTotal; ?>" readonly>
+            </div>
+        </div>
+        <div align="right">
+            <input type="submit" name="bayar" id="bayar" value="Bayar" class="btn btn-warning ">
         </div>
     </form>
 
