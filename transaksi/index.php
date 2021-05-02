@@ -13,8 +13,8 @@ $totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FR
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="../bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link href="../fontawesome-free-5.15.3-web/css/fontawesome.css" rel="stylesheet">
     <link href="../fontawesome-free-5.15.3-web/css/brands.css" rel="stylesheet">
     <link href="../fontawesome-free-5.15.3-web/css/solid.css" rel="stylesheet">
@@ -97,6 +97,56 @@ $totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FR
             <td>--</td>
         </tr>
     </table>
+
+    <script>
+        $.Shortcuts.add({
+            type: 'down',
+            mask: 'P',
+            handler: function() {
+                window.print();
+            }
+        }).start();
+    </script>
+
+    <script>
+        $.Shortcuts.add({
+            type: 'down',
+            mask: 'CTRL+G',
+            handler: function() {
+                window.open('http://www.google.com', '_self');
+            }
+        }).start();
+    </script>
+
+    <script>
+        $.Shortcuts.add({
+            type: 'down',
+            mask: 'ALT+R',
+            handler: function() {
+                window.open('https://blog.rosihanari.net', '_blank');
+            }
+        }).start();
+    </script>
+
+    <script>
+        $.Shortcuts.add({
+            type: 'down',
+            mask: 'F8',
+            handler: function() {
+                document.getElementById('title').innerHTML = "Hallo";
+            }
+        }).start();
+    </script>
+
+    <script>
+        $.Shortcuts.add({
+            type: 'down',
+            mask: 'F9',
+            handler: function() {
+                document.getElementById('title').innerHTML = "Contoh Shortcut Action";
+            }
+        }).start();
+    </script>
 
 </body>
 

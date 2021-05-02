@@ -12,7 +12,7 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="../bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>KANTIN KEJUJURAN</title>
 </head>
@@ -22,7 +22,7 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama : </label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext border border-warning progress-bar" id="nama" name="nama" placeholder="Nama Anda">
+                <input type="text" oninvalid="this.setCustomValidity('Nama Pembeli Wajib diisi . . . .')" oninput="setCustomValidity('')" class="form-control-plaintext border border-warning progress-bar" id="nama" name="nama" placeholder="Nama Anda" required>
             </div>
         </div>
         <div class="form-group row">
@@ -32,7 +32,7 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
             </div>
         </div>
         <div align="right">
-            <input type="submit" name="bayar" id="bayar" value="Bayar" class="btn btn-warning ">
+            <input type="submit" name="bayar" id="bayar" value="CASH OUT ( ENTER )" class="btn btn-warning ">
         </div>
     </form>
 

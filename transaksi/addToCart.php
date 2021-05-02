@@ -12,8 +12,8 @@ if (isset($_POST['oke'])) {
         $getNama = $desc_item['nama_barang'];
         $total = $jumlah * $getHarga;
         mysqli_query($conn, "INSERT INTO cart VALUES(NULL, '$id_barang', '$getNama', '$getHarga', '$jumlah', '$total')");
-        header('location: index.php');
     } else {
         echo "<script>alert('ID BARANG TIDAK DI TEMUKAN')</script>";
     }
+    header('location: index.php');
 }
