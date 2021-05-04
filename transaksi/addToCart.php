@@ -29,5 +29,6 @@ if (isset($_POST['oke'])) {
         }
     } else {
         echo "<script>alert('ID BARANG TIDAK DI TEMUKAN')</script>";
+        header('location: index.php');
     }
 }
