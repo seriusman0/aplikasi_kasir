@@ -28,23 +28,33 @@ if (isset($_POST['tambah'])) {
     </h1>
     <div>
         <form action="" method="post">
-            <p>
+
+            <div class="form-group-row">
                 <label for="id_barang">ID BARANG : </label>
-                <input type="text" name="id_barang" autofocus>
-            </p>
-            <p>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control-plaintext border border-warning progress-bar text-dark" name="id_barang" autofocus>
+                </div>
+            </div>
+            <div>
                 <label for="nama_barang">Nama Barang : </label>
-                <input type="text" name="nama_barang">
-            </p>
-            <p>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control-plaintext border border-warning progress-bar text-dark" name="nama_barang">
+                </div>
+            </div>
+            <div>
                 <label for="harga">Harga : </label>
-                <input type="number" name="harga">
-            </p>
-            <p>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control-plaintext border border-warning progress-bar text-dark" name="harga">
+                </div>
+            </div>
+            <div>
                 <label for="stok">Stok : </label>
-                <input type="number" name="stok">
-            </p>
-            <input type="submit" name="tambah" value="Tambah">
+                <div class="col-sm-10">
+                    <input type="number" class="form-control-plaintext border border-warning progress-bar text-dark" name="stok">
+                </div>
+            </div>
+            <br>
+            <input type="submit" class="fas fa-shopping-cart btn btn-warning btn-lg btn-block" name="tambah" value="Tambah">
         </form>
     </div>
 </body>
