@@ -1,11 +1,7 @@
 <?php
 include '../barang/config.php';
 $history = mysqli_query($conn, "select * from history order by id_history desc");
-function rupiah($angka)
-{
-    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
-    return $hasil_rupiah;
-}
+
 
 ?>
 
@@ -41,7 +37,7 @@ function rupiah($angka)
                     <td>$r[nama_pembeli]</td>
                     <td>$r[nama_barang]</td>
                     <td>" . rupiah($r['harga']) . "</td>
-                    <td>$r[jumlah]</td>
+                    <td align='center'>$r[jumlah]</td>
                     <td>" . rupiah($r['total']) . "</td>
                  </tr>";
             $no++;

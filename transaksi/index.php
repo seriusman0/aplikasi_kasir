@@ -3,6 +3,11 @@ include '../barang/config.php';
 include 'functions.php';
 
 $totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FROM `history`"))[0];
+function rupiah($angka)
+{
+    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
+    return $hasil_rupiah;
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,77 +30,37 @@ $totalKeseluruhan = mysqli_fetch_array(mysqli_query($conn, "SELECT sum(total) FR
 
     <h1 class="alert alert-primary text-center">
         SELAMAT DATANG DI KANTIN KEJUJURAN
+
         <font size="1">
             <marquee behavior="alternate" class="fixed-bottom" width="100%">Aplikasi masih dalam tahap pengembangan . . . .</marquee><br>
         </font>
     </h1>
+
     <div class="container-sm"></div>
     <table align="center" class="table table-success">
         <tr>
-            <th width='40%' class="position-relative">1. Menu</th>
-            <th>History</th>
-            <th width="10%" class="bg-success text-center">Total <?php echo "Rp " . number_format($totalKeseluruhan, 0, ',', '.'); ?></th>
-        </tr>
-        <tr>
-            <td><?php include 'add.php' ?></td>
-            <td rowspan="19" colspan="2">
-                <?php include 'history.php' ?>
-            </td>
-        </tr>
-        <tr>
+            <th width="30%">1. Menu</th>
             <th>2. Cart</th>
         </tr>
         <tr>
-            <td><?php include 'cart.php' ?></td>
+            <td><?php include 'add.php' ?></td>
+            <td>
+                <?php include 'cart.php' ?>
+            </td>
         </tr>
         <tr>
-            <td>--</td>
+            <th colspan="2">History</th>
         </tr>
         <tr>
-            <td>--</td>
+            <td colspan="2"><?php include 'history.php' ?></td>
         </tr>
+
         <tr>
-            <td>--</td>
+            <td class="bg-success text-center">Total <?php echo "Rp " . number_format($totalKeseluruhan, 0, ',', '.'); ?>
+            </td>
         </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
-        <tr>
-            <td>--</td>
-        </tr>
+
+
     </table>
 
     <script>

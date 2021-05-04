@@ -24,14 +24,8 @@ include '../barang/config.php';
                 <input type="text" autocomplete=false oninvalid="this.setCustomValidity('Scan Barcode dulu ya. . . . . .')" oninput="setCustomValidity('')" width="10%" class="form-control-plaintext border border-warning progress-bar text-dark" id="id_barang" name="id_barang" placeholder="Scan Barcode" autofocus required>
             </div>
         </div>
-        <div class="form-group row">
-            <label for="jumlah" class="col-sm-2 col-form-label">Jumlah : </label>
-            <div class="col-sm-10">
-                <input type="text" oninvalid="this.setCustomValidity('Mau beli berapa banyak? isi di sini ya.. . . .')" oninput="setCustomValidity('')" class="form-control-plaintext border border-warning progress-bar" id="jumlah" name="jumlah" placeholder="Jumlah Item" required>
-            </div>
-        </div>
         <div class="form-group" align="right">
-            <input type="submit" name="oke" id="oke" value="ADD TO CART ( ENTER )" class="fas fa-shopping-cart btn btn-warning btn-lg btn-block">
+            <input type="submit" name="oke" id="oke" hidden tabindex="-1" value="ADD TO CART ( ENTER )" class="fas fa-shopping-cart btn btn-warning btn-lg btn-block">
         </div>
     </form>
 

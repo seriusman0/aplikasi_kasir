@@ -18,6 +18,8 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
 </head>
 
 <body>
+
+
     <form action="payment.php" method="post">
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama : </label>
@@ -28,14 +30,13 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
         <div class="form-group row">
             <label for="paid" class="col-sm-2 col-form-label">Total Bayar : </label>
             <div class="col-sm-10">
-                <input type="number" class="form-control-plaintext progress-bar bg-danger" id="paid" name="paid" placeholder="Total Tagihan" value="<?= $jTotal; ?>" readonly>
+                <input type="text" class="form-control-plaintext progress-bar bg-danger" id="paid" name="paid" placeholder="Total Tagihan" value="<?= rupiah($jTotal); ?>" readonly>
             </div>
         </div>
         <div align="right">
             <input type="submit" name="bayar" id="bayar" value="CASH OUT ( ENTER )" class="btn btn-warning ">
         </div>
     </form>
-
     <table>
         <tr>
             <th>No</th>
@@ -48,21 +49,19 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
         </tr>
         <?php $no = 1;
         while ($r = mysqli_fetch_array($barang)) {
-            echo "<tr>
+            echo "<tr  tabindex='8'>
                     <td>$no</td>
                     <td>$r[id_barang]</td>
                     <td>$r[nama_barang]</td>
                     <td>$r[harga_barang]</td>
                     <td>$r[jumlah]</td>
-                    <td>$r[total]</td>
+                    <td>" . rupiah($r['total']) . "</td>
                     <td><a href='cancel.php?id=$r[id_cart]' onclick=\"return confirm('Yakin ini Dihapus?')\" >Cancel</a></td>
                  </tr>";
             $no++;
         }
-
         ?>
     </table>
-
 
 </body>
 
