@@ -33,7 +33,7 @@ CREATE TABLE `barang` (
   `nama_barang` varchar(20) NOT NULL,
   `harga` int NOT NULL,
   `stok` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `barang`
@@ -88,11 +88,11 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga`, `stok`) VALUES
 CREATE TABLE `cart` (
   `id_cart` int NOT NULL,
   `id_barang` varchar(30) NOT NULL,
-  `nama_barang` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama_barang` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `harga_barang` int NOT NULL,
   `jumlah` int NOT NULL,
   `total` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -103,12 +103,12 @@ CREATE TABLE `cart` (
 CREATE TABLE `history` (
   `id_history` int NOT NULL,
   `nama_pembeli` varchar(30) NOT NULL,
-  `nama_barang` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama_barang` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `harga` int NOT NULL,
   `jumlah` int NOT NULL,
   `total` int NOT NULL,
   `at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `history`
@@ -131,7 +131,7 @@ CREATE TABLE `pembayaran` (
   `tgl_bayar` date NOT NULL,
   `total_bayar` int NOT NULL,
   `id_transaksi` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -145,7 +145,7 @@ CREATE TABLE `pembeli` (
   `jk` char(1) NOT NULL,
   `no_telp` char(14) NOT NULL,
   `alamat` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,7 @@ CREATE TABLE `transaksi` (
   `id_pembeli` int NOT NULL,
   `tanggal` date NOT NULL,
   `keterangan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Indexes for dumped tables

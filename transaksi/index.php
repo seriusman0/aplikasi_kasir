@@ -32,7 +32,7 @@ function rupiah($angka)
         SELAMAT DATANG DI KANTIN KEJUJURAN
 
         <font size="1">
-            <marquee behavior="alternate" class="fixed-bottom" width="100%">Aplikasi masih dalam tahap pengembangan . . . .</marquee><br>
+            <marquee behavior="alternate" class="fixed-bottom" width="100%">Hak cipta oleh Brosis Ketintang </marquee><br>
         </font>
     </h1>
 

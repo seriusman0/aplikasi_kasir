@@ -31,8 +31,8 @@ function rupiah($angka)
     <a class="btn btn-success" href="report.php">Download History</a> <a class="btn btn-danger" href="clear.php" onclick="return confirm('Yakin Ingin Membersihkan History?')">Clear History</a>
     <table align="center" class="table" border="1">
         <tr>
-            <th colspan="4" width="40%">menu</th>
-            <th colspan="8" width="80%">view</th>
+            <th colspan="4" width="40%"></th>
+            <th colspan="8" width="80%"></th>
         </tr>
         <tr>
             <td colspan="4"><?php include 'tambahbarang.php' ?></td>
