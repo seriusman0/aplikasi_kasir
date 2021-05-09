@@ -32,25 +32,25 @@ if (isset($_POST['tambah'])) {
             <div class="form-group-row">
                 <label for="id_barang">ID BARANG : </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control-plaintext border border-warning progress-bar text-dark" name="id_barang" autofocus>
+                    <input required type="text" class="form-control-plaintext border border-warning progress-bar text-dark" name="id_barang" autofocus>
                 </div>
             </div>
             <div>
                 <label for="nama_barang">Nama Barang : </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control-plaintext border border-warning progress-bar text-dark" name="nama_barang">
+                    <input required type="text" class="form-control-plaintext border border-warning progress-bar text-dark" name="nama_barang">
                 </div>
             </div>
             <div>
                 <label for="harga">Harga : </label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control-plaintext border border-warning progress-bar text-dark" name="harga">
+                    <input required type="number" class="form-control-plaintext border border-warning progress-bar text-dark" name="harga">
                 </div>
             </div>
             <div>
                 <label for="stok">Stok : </label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control-plaintext border border-warning progress-bar text-dark" name="stok">
+                    <input required type="number" class="form-control-plaintext border border-warning progress-bar text-dark" name="stok">
                 </div>
             </div>
             <br>
