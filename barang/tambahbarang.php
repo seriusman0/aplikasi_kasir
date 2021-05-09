@@ -6,7 +6,16 @@ if (isset($_POST['tambah'])) {
     $harga = $_POST['harga'];
     $stok = $_POST['stok'];
 
-    mysqli_query($conn, "INSERT INTO barang values('$id_barang','$nama_barang','$harga','$stok')");
+    if (mysqli_num_rows(mysqli_query($conn, "select id_barang from barang where id_barang = '$id_barang'")) > 0) {
+        echo "<script>alert('data Sudah ada, Tambakan Jumlah saja')</script>";
+        $getDetailProduct = mysqli_fetch_array(mysqli_query($conn, "select * from barang where id_barang = '$id_barang'"));
+        $getStok = $getDetailProduct['stok'] + $stok;
+        $updateCart = "UPDATE barang SET barang.stok = '$getStok' where id_barang = '$id_barang'";
+            mysqli_query($conn, $updateCart);
+            
+    }else{
+        mysqli_query($conn, "INSERT INTO barang values('$id_barang','$nama_barang','$harga','$stok')");
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -20,6 +29,7 @@ if (isset($_POST['tambah'])) {
 </head>
 
 <body>
+
     <h1><b>
             <center>
                 TAMBAH BARANG
