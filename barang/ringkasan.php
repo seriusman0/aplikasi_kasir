@@ -7,6 +7,11 @@ header("Expires: 0");
 session_start();
 error_reporting(0);
 include "config.php";
+function rupiah($angka)
+{
+    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
+    return $hasil_rupiah;
+}
 ?>
 
 <head>
