@@ -42,7 +42,7 @@ function rupiah($angka)
         <tr>
             <td>
                 <p>
-                    Judul Baru
+                    <?php include 'rekapitulasi.php' ?>
                 </p>
 
             </td>
