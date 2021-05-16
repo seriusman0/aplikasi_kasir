@@ -1,7 +1,8 @@
 <?php
 include 'config.php';
 
-$barang = mysqli_query($conn, "select * from barang order by nama_barang");
+$barang = mysqli_query($conn, "select * from barang order by at desc");
+
 ?>
 
 <!DOCTYPE html>
