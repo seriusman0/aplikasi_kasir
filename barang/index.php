@@ -40,7 +40,12 @@ function rupiah($angka)
             <td rowspan="4" colspan="8" align="center"><?php include 'view.php' ?></td>
         </tr>
         <tr>
-            <td>Judul Baru</td>
+            <td>
+                <p>
+                    <?php include 'rekapitulasi.php' ?>
+                </p>
+
+            </td>
         </tr>
     </table>
 
