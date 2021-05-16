@@ -78,7 +78,7 @@ function rupiah($angka)
                                     <td>$i[nama_barang]</td>
                                     <td>" . rupiah($i['harga']) . "</td>
                                     <td>$i[jumlah]</td>
-                                    <td>$i[total]</td>
+                                    <td>" . rupiah($i['total']) . "</td>
                                     <td>$i[at]</td>
                                  </tr>";
         $no++;
