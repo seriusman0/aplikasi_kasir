@@ -28,11 +28,10 @@ $result = mysqli_query($conn, "SELECT nama_pembeli as nama, sum(jumlah) as jumla
             echo "<tr>
                     <td>$no</td>
                     <td>$r[nama]</td>
-                    <td>$r[jumlah]</td>
-                    <td>$r[total]</td>
+                    <td>" . rupiah($r['jumlah']) . "</td>
+                    <td>" . rupiah($r['total']) . "</td>
                  </tr>";
             $no++;
-            var_dump($result);
         }
 
         ?>
