@@ -7,22 +7,13 @@ if (isset($_POST['tambah'])) {
     $stok = $_POST['stok'];
 
     if (mysqli_num_rows(mysqli_query($conn, "select id_barang from barang where id_barang = '$id_barang'")) > 0) {
-<<<<<<< HEAD
         echo "<script>alert('data Sudah ada, Tambakan Jumlah saja')</script>";
         $getDetailProduct = mysqli_fetch_array(mysqli_query($conn, "select * from barang where id_barang = '$id_barang'"));
         $getStok = $getDetailProduct['stok'] + $stok;
         $updateCart = "UPDATE barang SET barang.stok = '$getStok' where id_barang = '$id_barang'";
-            mysqli_query($conn, $updateCart);
-            
-    }else{
-        mysqli_query($conn, "INSERT INTO barang values('$id_barang','$nama_barang','$harga','$stok')");
-=======
-        echo "<script>alert('Data barang sudah ada, akan ditambahkan sesuai stok')</script>";
-        $stokBaru = mysqli_fetch_array(mysqli_query($conn, "select stok from barang where id_barang = '$id_barang'"))['stok'] + $stok;
-        mysqli_query($conn, "UPDATE barang set stok = '$stokBaru' where id_barang = '$id_barang'");
+        mysqli_query($conn, $updateCart);
     } else {
-        mysqli_query($conn, "INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga`, `stok`)  values('$id_barang','$nama_barang','$harga','$stok')");
->>>>>>> 98e5c483037478be1a1f20ed80108d6269c8f2ad
+        mysqli_query($conn, "INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga`, `stok`) values('$id_barang','$nama_barang','$harga','$stok')");
     }
 }
 ?>
