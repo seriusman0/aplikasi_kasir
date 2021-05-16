@@ -7,6 +7,11 @@ header("Expires: 0");
 session_start();
 error_reporting(0);
 include "config.php";
+function rupiah($angka)
+{
+    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
+    return $hasil_rupiah;
+}
 ?>
 
 <head>
@@ -71,7 +76,7 @@ include "config.php";
                                     <td>$no</td>
                                     <td>$i[nama_pembeli]</td>
                                     <td>$i[nama_barang]</td>
-                                    <td>$i[harga]</td>
+                                    <td>" . rupiah($i['harga']) . "</td>
                                     <td>$i[jumlah]</td>
                                     <td>$i[total]</td>
                                     <td>$i[at]</td>
