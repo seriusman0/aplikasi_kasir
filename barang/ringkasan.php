@@ -68,7 +68,7 @@ include "config.php";
                                     <td>$no</td>
                                     <td>$i[nama]</td>
                                     <td>$i[jumlah]</td>
-                                    <td>$i[total]</td>
+                                    <td>" . rupiah($r['total']) . "</td>
                                  </tr>";
         $no++;
     }
