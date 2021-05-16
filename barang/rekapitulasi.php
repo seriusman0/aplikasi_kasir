@@ -15,7 +15,7 @@ $result = mysqli_query($conn, "SELECT nama_pembeli as nama, sum(jumlah) as jumla
 
 <body>
     <h1>Rekapitulasi Belanja</h1>
-    <table border="1">
+    <table border="1" class="table">
         <tr>
             <th>No</th>
             <th>Nama Pembeli</th>
@@ -28,7 +28,7 @@ $result = mysqli_query($conn, "SELECT nama_pembeli as nama, sum(jumlah) as jumla
             echo "<tr>
                     <td>$no</td>
                     <td>$r[nama]</td>
-                    <td>" . rupiah($r['jumlah']) . "</td>
+                    <td>$r[jumlah]</td>
                     <td>" . rupiah($r['total']) . "</td>
                  </tr>";
             $no++;
