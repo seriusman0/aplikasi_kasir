@@ -1,0 +1,623 @@
+
+<head>
+    <title> Export To Excell </title>
+    <style>
+        .input1 {
+            height: 20px;
+            font-size: 12px;
+            padding-left: 5px;
+            margin: 5px 0px 0px 5px;
+            width: 97%;
+            border: none;
+            color: red;
+        }
+
+        #kiri {
+            width: 50%;
+            float: left;
+        }
+
+        #kanan {
+            width: 50%;
+            float: right;
+            padding-top: 20px;
+            margin-bottom: 9px;
+        }
+
+        td {
+            border: 1px solid #000;
+        }
+
+        th {
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+
+<body onload="window.print()">
+    <table class="basic" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" colspan="7"><strong>Kantin Kejujuran Report Sunday, 26-09-2021</strong></td>
+        </tr>
+    </table>
+    <br>
+    <table width=100% border=1>
+					<tr bgcolor='green'>
+                        <th>No</th>
+                        <th>Nama Pembeli</th>
+                        <th>Nama Item</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                        <th>Tgl</th>
+                    </tr>
+                    </thead>
+                    <tbody><tr class='gradeX'>
+                                    <td>1</td>
+                                    <td>Glorio</td>
+                                    <td>Soba</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-24 07:24:12</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>2</td>
+                                    <td>Glorio</td>
+                                    <td>oishi udang pedas</td>
+                                    <td>Rp 1.000</td>
+                                    <td>3</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-24 07:24:13</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>3</td>
+                                    <td>Glorio</td>
+                                    <td>top tc</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-24 07:24:13</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>4</td>
+                                    <td>Johan</td>
+                                    <td>Nitto Wafer</td>
+                                    <td>Rp 1.000</td>
+                                    <td>4</td>
+                                    <td>Rp 4.000</td>
+                                    <td>2021-09-24 08:30:21</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>5</td>
+                                    <td>Johan</td>
+                                    <td>Chacha Peanut</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-24 08:30:22</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>6</td>
+                                    <td>kak Liya</td>
+                                    <td>Top Black and White</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-24 15:51:06</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>7</td>
+                                    <td>kak Liya</td>
+                                    <td>tim tam mini</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-24 15:51:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>8</td>
+                                    <td>Glorio</td>
+                                    <td>Tebs Sparkling</td>
+                                    <td>Rp 4.500</td>
+                                    <td>1</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2021-09-24 20:44:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>9</td>
+                                    <td>Glorio</td>
+                                    <td>greensands</td>
+                                    <td>Rp 5.500</td>
+                                    <td>1</td>
+                                    <td>Rp 5.500</td>
+                                    <td>2021-09-24 20:44:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>10</td>
+                                    <td>Johan</td>
+                                    <td>Polaris Coffe Cream</td>
+                                    <td>Rp 6.500</td>
+                                    <td>1</td>
+                                    <td>Rp 6.500</td>
+                                    <td>2021-09-24 20:45:27</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>11</td>
+                                    <td>intan</td>
+                                    <td>Pasta Keju</td>
+                                    <td>Rp 500</td>
+                                    <td>4</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-24 20:53:33</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>12</td>
+                                    <td>intan</td>
+                                    <td>Oreo Soft Cake</td>
+                                    <td>Rp 2.000</td>
+                                    <td>1</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-24 20:53:33</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>13</td>
+                                    <td>Johan</td>
+                                    <td>Pop Mie Kuah Pedes D</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-24 20:54:00</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>14</td>
+                                    <td>Glorio</td>
+                                    <td>Mie Sedap Cup Rawit </td>
+                                    <td>Rp 4.000</td>
+                                    <td>1</td>
+                                    <td>Rp 4.000</td>
+                                    <td>2021-09-24 20:58:20</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>15</td>
+                                    <td>Nomar</td>
+                                    <td>Tora Cafe Milk Latte</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-24 21:04:53</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>16</td>
+                                    <td>Serius</td>
+                                    <td>Tora Susu</td>
+                                    <td>Rp 1.000</td>
+                                    <td>3</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-24 21:20:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>17</td>
+                                    <td>Serius</td>
+                                    <td>Top coffe</td>
+                                    <td>Rp 1.000</td>
+                                    <td>3</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-24 21:20:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>18</td>
+                                    <td>Max</td>
+                                    <td>good day mocacino</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-24 21:34:50</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>19</td>
+                                    <td>shania</td>
+                                    <td>walut tango</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-24 22:14:06</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>20</td>
+                                    <td>Aldo</td>
+                                    <td>fisian flag SD</td>
+                                    <td>Rp 5.500</td>
+                                    <td>1</td>
+                                    <td>Rp 5.500</td>
+                                    <td>2021-09-25 07:26:09</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>21</td>
+                                    <td>Budi</td>
+                                    <td>ultra FC</td>
+                                    <td>Rp 4.500</td>
+                                    <td>1</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2021-09-25 08:01:12</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>22</td>
+                                    <td>Budi</td>
+                                    <td>Beng-Beng Maxx</td>
+                                    <td>Rp 3.000</td>
+                                    <td>1</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-25 08:01:12</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>23</td>
+                                    <td>Budi</td>
+                                    <td>Top coffe</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-25 08:01:13</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>24</td>
+                                    <td>Glorio</td>
+                                    <td>Ultra Milk Coklat</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2</td>
+                                    <td>Rp 9.000</td>
+                                    <td>2021-09-25 08:01:35</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>25</td>
+                                    <td>Johan</td>
+                                    <td>sprite</td>
+                                    <td>Rp 5.500</td>
+                                    <td>1</td>
+                                    <td>Rp 5.500</td>
+                                    <td>2021-09-25 08:28:04</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>26</td>
+                                    <td>Johan</td>
+                                    <td>qtela Original</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-25 08:38:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>27</td>
+                                    <td>Max</td>
+                                    <td>Roti Sisir</td>
+                                    <td>Rp 2.000</td>
+                                    <td>1</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-25 09:05:19</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>28</td>
+                                    <td>Glorio</td>
+                                    <td>Kacang Koro</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-25 12:30:56</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>29</td>
+                                    <td>Glorio</td>
+                                    <td>oishi udang pedas</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-25 12:30:56</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>30</td>
+                                    <td>Budi</td>
+                                    <td>frestea madu</td>
+                                    <td>Rp 3.500</td>
+                                    <td>1</td>
+                                    <td>Rp 3.500</td>
+                                    <td>2021-09-25 15:07:08</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>31</td>
+                                    <td>Aldo</td>
+                                    <td>nutrisari sweet oran</td>
+                                    <td>Rp 1.500</td>
+                                    <td>2</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-25 17:13:37</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>32</td>
+                                    <td>Nomar</td>
+                                    <td>Tora Cafe</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-25 17:21:04</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>33</td>
+                                    <td>Glorio</td>
+                                    <td>Oreo Soft Cake</td>
+                                    <td>Rp 2.000</td>
+                                    <td>1</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-25 17:36:07</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>34</td>
+                                    <td>Glorio</td>
+                                    <td>twistko</td>
+                                    <td>Rp 2.500</td>
+                                    <td>1</td>
+                                    <td>Rp 2.500</td>
+                                    <td>2021-09-25 17:36:08</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>35</td>
+                                    <td>Glorio</td>
+                                    <td>tic tac mix</td>
+                                    <td>Rp 1.000</td>
+                                    <td>1</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2021-09-25 17:36:08</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>36</td>
+                                    <td>Aldo</td>
+                                    <td>Lasegar</td>
+                                    <td>Rp 3.500</td>
+                                    <td>1</td>
+                                    <td>Rp 3.500</td>
+                                    <td>2021-09-25 21:12:42</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>37</td>
+                                    <td>intan</td>
+                                    <td>sprite</td>
+                                    <td>Rp 5.500</td>
+                                    <td>1</td>
+                                    <td>Rp 5.500</td>
+                                    <td>2021-09-25 22:10:44</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>38</td>
+                                    <td>intan</td>
+                                    <td>SUPERCO</td>
+                                    <td>Rp 1.000</td>
+                                    <td>2</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-25 22:10:44</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>39</td>
+                                    <td>Johan</td>
+                                    <td>coolant lychee</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-25 23:00:28</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>40</td>
+                                    <td>Johan</td>
+                                    <td>Milku Coklat</td>
+                                    <td>Rp 3.000</td>
+                                    <td>1</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-25 23:00:28</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>41</td>
+                                    <td>Nomar</td>
+                                    <td>abc kopi susu</td>
+                                    <td>Rp 3.000</td>
+                                    <td>1</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-26 06:02:10</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>42</td>
+                                    <td>Nomar</td>
+                                    <td>gd avocado</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 06:02:10</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>43</td>
+                                    <td>ibu</td>
+                                    <td>Oreo Soft Cake</td>
+                                    <td>Rp 2.000</td>
+                                    <td>1</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2021-09-26 10:32:23</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>44</td>
+                                    <td>ibu</td>
+                                    <td>ultra FC</td>
+                                    <td>Rp 4.500</td>
+                                    <td>1</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2021-09-26 10:32:23</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>45</td>
+                                    <td>ibu</td>
+                                    <td>Gabin</td>
+                                    <td>Rp 5.500</td>
+                                    <td>1</td>
+                                    <td>Rp 5.500</td>
+                                    <td>2021-09-26 10:32:23</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>46</td>
+                                    <td>ibu</td>
+                                    <td>coolant star </td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 10:32:23</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>47</td>
+                                    <td>ibu</td>
+                                    <td>Kusuka Barbeque</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2</td>
+                                    <td>Rp 10.000</td>
+                                    <td>2021-09-26 10:32:23</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>48</td>
+                                    <td>ibu</td>
+                                    <td>Polaris Coffe Cream</td>
+                                    <td>Rp 6.500</td>
+                                    <td>1</td>
+                                    <td>Rp 6.500</td>
+                                    <td>2021-09-26 10:32:23</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>49</td>
+                                    <td>ibu</td>
+                                    <td>Finna Kerupuk Udang</td>
+                                    <td>Rp 1.500</td>
+                                    <td>1</td>
+                                    <td>Rp 1.500</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>50</td>
+                                    <td>ibu</td>
+                                    <td>Nutriboost Orange</td>
+                                    <td>Rp 3.500</td>
+                                    <td>1</td>
+                                    <td>Rp 3.500</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>51</td>
+                                    <td>ibu</td>
+                                    <td>nutrijell jelly shak</td>
+                                    <td>Rp 4.500</td>
+                                    <td>1</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>52</td>
+                                    <td>ibu</td>
+                                    <td>Milku Coklat</td>
+                                    <td>Rp 3.000</td>
+                                    <td>1</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>53</td>
+                                    <td>ibu</td>
+                                    <td>PULPY JAMBU</td>
+                                    <td>Rp 4.500</td>
+                                    <td>1</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>54</td>
+                                    <td>ibu</td>
+                                    <td>happy tos</td>
+                                    <td>Rp 4.000</td>
+                                    <td>1</td>
+                                    <td>Rp 4.000</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>55</td>
+                                    <td>ibu</td>
+                                    <td> FRENCH FRIES</td>
+                                    <td>Rp 2.500</td>
+                                    <td>1</td>
+                                    <td>Rp 2.500</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>56</td>
+                                    <td>ibu</td>
+                                    <td>CHOCO IMOET</td>
+                                    <td>Rp 4.500</td>
+                                    <td>1</td>
+                                    <td>Rp 4.500</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>57</td>
+                                    <td>ibu</td>
+                                    <td>Lasegar</td>
+                                    <td>Rp 3.500</td>
+                                    <td>2</td>
+                                    <td>Rp 7.000</td>
+                                    <td>2021-09-26 10:32:24</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>58</td>
+                                    <td>ibu</td>
+                                    <td>frestae teh melati</td>
+                                    <td>Rp 3.500</td>
+                                    <td>1</td>
+                                    <td>Rp 3.500</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>59</td>
+                                    <td>ibu</td>
+                                    <td>qtela Original</td>
+                                    <td>Rp 5.000</td>
+                                    <td>3</td>
+                                    <td>Rp 15.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>60</td>
+                                    <td>ibu</td>
+                                    <td>kratingdaeng</td>
+                                    <td>Rp 5.500</td>
+                                    <td>1</td>
+                                    <td>Rp 5.500</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>61</td>
+                                    <td>ibu</td>
+                                    <td>frestea madu</td>
+                                    <td>Rp 3.500</td>
+                                    <td>2</td>
+                                    <td>Rp 7.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>62</td>
+                                    <td>ibu</td>
+                                    <td>Roti Sisir</td>
+                                    <td>Rp 2.000</td>
+                                    <td>2</td>
+                                    <td>Rp 4.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>63</td>
+                                    <td>ibu</td>
+                                    <td>iced milk tora cafe</td>
+                                    <td>Rp 2.500</td>
+                                    <td>2</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>64</td>
+                                    <td>ibu</td>
+                                    <td>abc kopi susu</td>
+                                    <td>Rp 3.000</td>
+                                    <td>1</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>65</td>
+                                    <td>ibu</td>
+                                    <td>twistko</td>
+                                    <td>Rp 2.500</td>
+                                    <td>2</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>66</td>
+                                    <td>ibu</td>
+                                    <td>Beng-Beng Maxx</td>
+                                    <td>Rp 3.000</td>
+                                    <td>1</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>67</td>
+                                    <td>ibu</td>
+                                    <td>nutrisari sweet oran</td>
+                                    <td>Rp 1.500</td>
+                                    <td>2</td>
+                                    <td>Rp 3.000</td>
+                                    <td>2021-09-26 10:32:25</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>68</td>
+                                    <td>ibu</td>
+                                    <td>Kusuka Barbeque</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 11:02:18</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>69</td>
+                                    <td>ibu</td>
+                                    <td>happy tos</td>
+                                    <td>Rp 4.000</td>
+                                    <td>1</td>
+                                    <td>Rp 4.000</td>
+                                    <td>2021-09-26 11:02:18</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>70</td>
+                                    <td>ibu</td>
+                                    <td>coolant lychee</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 11:02:19</td>
+                                 </tr><tr class='gradeX'>
+                                    <td>71</td>
+                                    <td>ibu</td>
+                                    <td>qtela Original</td>
+                                    <td>Rp 5.000</td>
+                                    <td>1</td>
+                                    <td>Rp 5.000</td>
+                                    <td>2021-09-26 11:02:19</td>
+                                 </tr>
