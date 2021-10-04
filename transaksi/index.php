@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['buyer'])) {
+    $_SESSION['buyer'] = '';
+}
 include '../barang/config.php';
 include 'functions.php';
 
@@ -8,6 +12,17 @@ function rupiah($angka)
     $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
     return $hasil_rupiah;
 }
+function typeBayar($data, $id)
+{
+    if ($data == 1) {
+        return "Lunas";
+    } else return "Ngutang <a href='lunas.php?id=$id'>Lunasi<a>";
+}
+
+if (isset($_POST['cnameSession'])) {
+    $_SESSION['buyer'] = $_POST['nameSession'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -38,19 +53,33 @@ function rupiah($angka)
 
     <div class="container-sm"></div>
     <table align="center" class="table table-success">
-        <tr>
-            <th width="30%">1. Menu</th>
-            <th>2. Cart</th>
-        </tr>
-        <tr>
-            <td><?php include 'add.php' ?></td>
-            <td>
-                <?php include 'cart.php' ?>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="2">History</th>
-        </tr>
+        <?php
+        if ($_SESSION['buyer'] != '') {
+        ?>
+
+            <tr>
+                <th width="30%">1. Menu</th>
+                <th>2. Cart</th>
+            </tr>
+            <tr>
+                <td><?php include 'add.php' ?></td>
+                <td>
+                    <?php include 'cart.php' ?>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">History</th>
+            </tr>
+            <h1 align="center"> Login Sebagai : <?= $_SESSION['buyer'] ?> atau <a href="logout.php">Reset Session</a></h1>
+        <?php } else { ?>
+            <div class="al-center m-4" align="center">
+                <h1 align="center">Sebelum bertransaksi, Harap input nama Anda</h1>
+                <form action='index.php' method='POST'>
+                    <input type='text' name='nameSession' autofocus required>
+                    <input type='submit' name='cnameSession' value='Set My Name'>
+                </form>
+            </div>
+        <?php } ?>
         <tr>
             <td colspan="2"><?php include 'history.php' ?></td>
         </tr>
@@ -59,9 +88,9 @@ function rupiah($angka)
             <td class="bg-success text-center">Total <?php echo "Rp " . number_format($totalKeseluruhan, 0, ',', '.'); ?>
             </td>
         </tr>
-
-
     </table>
+
+
 
     <script>
         $.Shortcuts.add({

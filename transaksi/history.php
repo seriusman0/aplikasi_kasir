@@ -27,10 +27,13 @@ $history = mysqli_query($conn, "select * from history order by id_history desc")
                 <th scope="col">Harga</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Total</th>
-                <a href=""></a>
+                <th scope="col">Time Stamp</th>
+                <th scope="col">Tipe Bayar</th>
             </tr>
         </thead>
-        <?php $no = 1;
+        <?php
+        $no = 1;
+
         while ($r = mysqli_fetch_array($history)) {
             echo "<tr class='table-dark text-dark'>
                     <td>$no</td>
@@ -39,6 +42,8 @@ $history = mysqli_query($conn, "select * from history order by id_history desc")
                     <td>" . rupiah($r['harga']) . "</td>
                     <td align='center'>$r[jumlah]</td>
                     <td>" . rupiah($r['total']) . "</td>
+                    <td>$r[at]</td>
+                    <td>" . typeBayar($r['pType'], $r['id_history']) . "</td>
                  </tr>";
             $no++;
         }

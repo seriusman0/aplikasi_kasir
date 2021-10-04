@@ -71,12 +71,11 @@ function rupiah($angka)
                         <th>Harga</th>
                         <th>Jumlah</th>
                         <th>Total</th>
-                        <th>Tipe Bayar</th>
                         <th>Tgl</th>
                     </tr>
                     </thead>
                     <tbody>";
-    $kredit = mysqli_query($conn, "SELECT * FROM history ORDER BY id_history ASC");
+    $kredit = mysqli_query($conn, "SELECT * FROM ibu ORDER BY id_ibu ASC");
     $no = 1;
     while ($i = mysqli_fetch_array($kredit)) {
         echo "<tr class='gradeX'>
@@ -86,10 +85,12 @@ function rupiah($angka)
                                     <td>" . rupiah($i['harga']) . "</td>
                                     <td>$i[jumlah]</td>
                                     <td>" . rupiah($i['total']) . "</td>
-                                    <td>" . typeBayar($i['pType']) . "</td>
                                     <td>$i[at]</td>
-
                                  </tr>";
         $no++;
     }
     ?>
+    <tr>
+        <td colspan="5" align="center">Total </td>
+        <td colspan="2" align="center"><?= rupiah(mysqli_fetch_assoc(mysqli_query($conn, "select sum(total) as total from ibu"))['total']) ?></td>
+    </tr>

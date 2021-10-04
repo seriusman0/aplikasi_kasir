@@ -24,11 +24,12 @@ if (isset($_POST['oke'])) {
             $getHarga = $desc_item['harga'];
             $getNama = $desc_item['nama_barang'];
             $total = $getHarga;
-            mysqli_query($conn, "INSERT INTO cart VALUES(NULL, '$id_barang', '$getNama', '$getHarga', '1', '$total')");
+            mysqli_query($conn, "INSERT INTO cart(`id_cart`, `id_barang`, `nama_barang`, `harga_barang`, `jumlah`, `total`, `update_at`) VALUES(NULL, '$id_barang', '$getNama', '$getHarga', '1', '$total', CURRENT_TIMESTAMP)");
             header('location: index.php');
         }
     } else {
-        echo "<script>alert('ID BARANG TIDAK DI TEMUKAN')</script>";
-        header('location: index.php');
+        echo "<script>alert('ID BARANG TIDAK DI TEMUKAN');
+        window.location='index.php'</script>";
+        // header('location: index.php');
     }
 }

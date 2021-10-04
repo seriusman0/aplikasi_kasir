@@ -4,8 +4,12 @@ function rupiah($angka)
     $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
     return $hasil_rupiah;
 }
-
-
+function typeBayar($data)
+{
+    if ($data == true) {
+        return "Lunas";
+    } else return "Ngutang";
+}
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +32,7 @@ function rupiah($angka)
             </center>
         </b>
     </h1>
-    <a class="btn btn-success" href="report.php">Download History</a> <a class="btn btn-info" href="ringkasan.php">Download Ringkasan </a> <a class="btn btn-danger" href="clear.php" onclick="return confirm('Yakin Ingin Membersihkan History?')">Clear History</a>
+    <a class="btn btn-success" href="report.php">Download History</a> <a class="btn btn-info" href="ringkasan.php">Download Ringkasan </a> <a class="btn btn-danger" href="clear.php" onclick="return confirm('Yakin Ingin Membersihkan History?')">Clear History</a> <a class="btn btn-success" href="ibu.php">Ibu</a> <a class="btn btn-info" href="reportIbu.php">Download Ibu</a> <a class="btn btn-danger" href="clearIbu.php" onclick="return confirm('Yakin Ingin Membersihkan History Ibu?')">Clear History Ibu</a>
     <table align="center" class="table" border="1">
         <tr>
             <th colspan="4" width="40%"></th>
