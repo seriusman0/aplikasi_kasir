@@ -43,7 +43,7 @@ $history = mysqli_query($conn, "select * from history order by id_history desc")
                     <td align='center'>$r[jumlah]</td>
                     <td>" . rupiah($r['total']) . "</td>
                     <td>$r[at]</td>
-                    <td>" . typeBayar($r['pType'], $r['id_history']) . "</td>
+                    <td tabindex='-1'>" . typeBayar($r['pType'], $r['id_history']) . "</td>
                  </tr>";
             $no++;
         }

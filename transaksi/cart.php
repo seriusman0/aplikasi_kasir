@@ -38,9 +38,9 @@ $jTotal = mysqli_fetch_array(mysqli_query($conn, "select sum(cart.total) from ca
             <label for="paid" class="col-sm-2 col-form-label">Tipe Pembayaran</label>
             <div class="col-sm-10">
                 <select name="paidType" id="paidType" required class="form-control-plaintext progress-bar bg-pink">
-                    <option value="">Type Pembayaran</option>
-                    <option value="0">Nguntang</option>
-                    <option value="1">Cash</option>
+                    <option value=""> - - - </option>
+                    <option value="0">Hutang</option>
+                    <option value="1">Lunas</option>
                 </select>
             </div>
         </div>

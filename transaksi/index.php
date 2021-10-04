@@ -16,7 +16,7 @@ function typeBayar($data, $id)
 {
     if ($data == 1) {
         return "Lunas";
-    } else return "Ngutang <a href='lunas.php?id=$id'>Lunasi<a>";
+    } else return "Ngutang <a tabindex='-1' href='lunas.php?id=$id'>Lunasi<a>";
 }
 
 if (isset($_POST['cnameSession'])) {
@@ -70,7 +70,9 @@ if (isset($_POST['cnameSession'])) {
             <tr>
                 <th colspan="2">History</th>
             </tr>
-            <h1 align="center"> Login Sebagai : <?= $_SESSION['buyer'] ?> atau <a href="logout.php">Reset Session</a></h1>
+
+            <h1 align="center"> Login Sebagai : <?= $_SESSION['buyer'] ?> atau <a tabindex="5" href="logout.php">Reset Session</a></h1>
+
         <?php } else { ?>
             <div class="al-center m-4" align="center">
                 <h1 align="center">Sebelum bertransaksi, Harap input nama Anda</h1>
