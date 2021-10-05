@@ -2,6 +2,7 @@
 include '../barang/config.php';
 include 'functions.php';
 
+
 if (isset($_POST['bayar'])) {
     var_dump($_POST);
     $nama = $_POST['nama'];
@@ -15,5 +16,5 @@ if (isset($_POST['bayar'])) {
     }
 
     mysqli_query($conn, "TRUNCATE cart");
-    header('location: index.php');
+    header('location: logout.php');
 }
