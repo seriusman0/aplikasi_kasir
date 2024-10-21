@@ -1,8 +1,9 @@
 <?php
-include '../barang/config.php';
-$history = mysqli_query($conn, "select * from history order by id_history desc");
-
-
+include "../barang/config.php";
+$history = mysqli_query(
+    $conn,
+    "select * from history order by id_history desc"
+);
 ?>
 
 <!DOCTYPE html>
@@ -39,15 +40,20 @@ $history = mysqli_query($conn, "select * from history order by id_history desc")
                     <td>$no</td>
                     <td>$r[nama_pembeli]</td>
                     <td>$r[nama_barang]</td>
-                    <td>" . rupiah($r['harga']) . "</td>
+                    <td>" .
+                rupiah($r["harga"]) .
+                "</td>
                     <td align='center'>$r[jumlah]</td>
-                    <td>" . rupiah($r['total']) . "</td>
+                    <td>" .
+                rupiah($r["total"]) .
+                "</td>
                     <td>$r[at]</td>
-                    <td tabindex='-1'>" . typeBayar($r['pType'], $r['id_history']) . "</td>
+                    <td tabindex='-1'>" .
+                typeBayar($r, $r["id_history"]) .
+                "</td>
                  </tr>";
             $no++;
         }
-
         ?>
     </table>
 
